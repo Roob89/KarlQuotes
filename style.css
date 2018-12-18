@@ -1,0 +1,38 @@
+/***************************************************************
+# Tags
+***************************************************************/
+
+html,body { margin: 0; padding: 0; color: #555; font-family: 'Merriweather', serif; background: #EFEFEF; font-size: 30px; }
+html { padding-bottom: 50px; position: relative; min-height: 100%; }
+h1,h2,h3,h4,h5 { font-weight: bold; }
+h1 { font-size: 50px; line-height: 1.4; }
+
+
+
+
+/***************************************************************
+# Class
+***************************************************************/
+
+.btn { color: inherit; border-radius: 100px; padding: 0.5em 3em; font-size: 20px; }
+.btn-grey { background: #DEDEDE; }
+
+.quote-container {margin: 10% 0 5%;}
+.quotemark { font-size: 50px; opacity: .5; }
+
+.footer {font-size: 14px;position: absolute;bottom: 0;left: 0;width: 100%;padding: 1em 0;}
+
+/***************************************************************
+# Responsive
+***************************************************************/
+
+@media (max-width: 1199.98px) {}
+@media (max-width: 991.98px) {}
+@media (max-width: 767.98px) {
+    
+    html, body { font-size: 20px; }
+    h1,
+    .quotemark { font-size: 30px; }
+    
+}
+@media (max-width: 575.98px) {}
