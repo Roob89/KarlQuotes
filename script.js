@@ -1,5 +1,6 @@
-console.log('script.js loaded');
-
+var quoteIndex = null;
+var rand = null;
+var quote = null;
 var quotes = [
     "By 78 you've done everything you're going to do. If you haven't bungee-jumped by the time you're 78 you're not going to do it.",
     "Do you know, if you had five photos of anuses, I could not point mine out.",
@@ -20,19 +21,25 @@ var quotes = [
     "A slug is always on its own. It is a lonely insect.",
     "I'm useless in water. I wake up at night drowning in my own saliva."
 ];
+var quoteContainer = document.getElementsByClassName('the-quote')[0];
 
 function generateQuote(){
     
     // Generate random number
-    var rand = null;
     function generateRandom(){
         rand = Math.floor(Math.random() * quotes.length);
     }
     generateRandom();
     
+    
+    // Check for duplicate
+    while( quoteIndex == rand ) {
+        generateRandom();
+    }
+    
     // Adding quote to HTML
-    var quote = quotes[rand];
-    var quoteContainer = document.getElementsByClassName('the-quote')[0];
+    quoteIndex = rand;
+    quote = quotes[rand];
     quoteContainer.innerHTML = quote;
     
 }
